@@ -65,35 +65,49 @@ class LatihanAssets extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text(
-                  'Halo button',
-                  style: TextStyle(
-                    color: Colors.black, fontWeight: FontWeight.w900, fontSize: 16
-                  ),
-                ),
-                Text(
-                  'Pencet saya',
-                  style: TextStyle(
-                    color: Colors.black, fontWeight: FontWeight.w900, fontSize: 16
-                  ),
-                ),
-                SizedBox(
+                Positioned(
                   width: width/2,
-                  child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.amber,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12), // <-- Radius
-                    ),
-                  ),
-                  onPressed: () {  }, 
-                  child: Text(
-                      'Pesan Test Sekarang',
+                  height: 50,
+                  child:
+                    Text(
+                      'Halo button',
                       style: TextStyle(
-                        color: Colors.black, fontWeight: FontWeight.w900, fontSize: 16
+                        color: Colors.black, fontWeight: FontWeight.w900, fontSize: 16,
                       ),
+                      textAlign: TextAlign.center,
                     ),
-                  ),
+                ),
+                Positioned(
+                  width: width/2,
+                  height: 50,
+                  child:
+                    Text(
+                      'Pencet saya',
+                      style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.w900, fontSize: 16,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                ),
+                Positioned(
+                  width: width/2,
+                  height: 50,
+                  child:
+                    SizedBox( 
+                      child : ElevatedButton.icon(
+                        icon: const Icon(Icons.abc, color: Colors.black), 
+                        label: const Text(
+                          "Pesan Text Sekarang",
+                          style: TextStyle(
+                            color: Colors.black, fontWeight: FontWeight.w900, fontSize: 16
+                          ),
+                        ), 
+                        onPressed: () {  },
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.amber,
+                        ),
+                      ),
+                    )
                 ),
               ],
             ),
